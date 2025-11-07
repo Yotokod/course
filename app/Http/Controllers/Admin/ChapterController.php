@@ -12,7 +12,7 @@ class ChapterController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.chapters.index');
     }
 
     /**
