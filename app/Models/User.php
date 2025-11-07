@@ -46,4 +46,46 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // Relationships
+    public function modules()
+    {
+        return $this->hasMany(Module::class, 'created_by');
+    }
+
+    public function purchases()
+    {
+        return $this->hasMany(Purchase::class);
+    }
+
+    public function accessCodes()
+    {
+        return $this->hasMany(AccessCode::class);
+    }
+
+    public function tickets()
+    {
+        return $this->hasMany(Ticket::class);
+    }
+
+    public function progress()
+    {
+        return $this->hasMany(UserProgress::class);
+    }
+
+    // Role check helpers
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
+    public function isFormateur(): bool
+    {
+        return $this->role === 'formateur';
+    }
+
+    public function isClient(): bool
+    {
+        return $this->role === 'client';
+    }
 }
