@@ -497,6 +497,24 @@ npm install
 composer dump-autoload
 ```
 
+### Erreur: "Foreign key constraint is incorrectly formed"
+
+Si vous obtenez une erreur de contrainte de clé étrangère lors de l'exécution des migrations, cela signifie que les tables sont créées dans le mauvais ordre. Les migrations ont été corrigées avec les bons timestamps pour s'exécuter dans l'ordre correct:
+
+1. modules (2025_11_07_224500)
+2. chapters (2025_11_07_224501)
+3. lessons (2025_11_07_224502)
+4. quizzes (2025_11_07_224503)
+5. quiz_options (2025_11_07_224504)
+6. access_codes (2025_11_07_224505)
+7. purchases (2025_11_07_224506)
+
+Si le problème persiste, réinitialisez la base de données:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
 ### Styles CSS ne s'appliquent pas
 
 ```bash
