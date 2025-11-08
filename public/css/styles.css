@@ -1,0 +1,486 @@
+/* ==============================================
+   E-Learning Platform Custom Design System
+   Modern Neomorphism & Glassmorphism Styles
+   ============================================== */
+
+/* Root Variables */
+:root {
+    --primary-purple: #6366f1;
+    --primary-purple-dark: #4f46e5;
+    --secondary-pink: #ec4899;
+    --accent-cyan: #06b6d4;
+    --success-green: #10b981;
+    --warning-yellow: #f59e0b;
+    --error-red: #ef4444;
+    
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --neo-bg: #e8ecf0;
+    --neo-shadow-dark: #c5cdd5;
+    --neo-shadow-light: #ffffff;
+}
+
+/* ============ Neomorphism Effects ============ */
+.neo {
+    background: var(--neo-bg);
+    box-shadow: 6px 6px 12px var(--neo-shadow-dark), 
+                -6px -6px 12px var(--neo-shadow-light);
+    border-radius: 20px;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.neo:hover {
+    box-shadow: 10px 10px 20px var(--neo-shadow-dark), 
+                -10px -10px 20px var(--neo-shadow-light);
+}
+
+.neo-inset {
+    background: var(--neo-bg);
+    box-shadow: inset 6px 6px 12px var(--neo-shadow-dark), 
+                inset -6px -6px 12px var(--neo-shadow-light);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.neo-button {
+    background: var(--neo-bg);
+    box-shadow: 4px 4px 8px var(--neo-shadow-dark), 
+                -4px -4px 8px var(--neo-shadow-light);
+    border-radius: 16px;
+    padding: 12px 32px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.neo-button:hover {
+    box-shadow: 6px 6px 12px var(--neo-shadow-dark), 
+                -6px -6px 12px var(--neo-shadow-light);
+    transform: translateY(-2px);
+}
+
+.neo-button:active {
+    box-shadow: inset 3px 3px 6px var(--neo-shadow-dark), 
+                inset -3px -3px 6px var(--neo-shadow-light);
+    transform: translateY(0);
+}
+
+.neo-card {
+    background: var(--neo-bg);
+    box-shadow: 10px 10px 20px var(--neo-shadow-dark), 
+                -10px -10px 20px var(--neo-shadow-light);
+    border-radius: 28px;
+    padding: 32px;
+    margin: 16px 0;
+    transition: all 0.3s ease;
+}
+
+.neo-card-hover:hover {
+    box-shadow: 15px 15px 30px var(--neo-shadow-dark), 
+                -15px -15px 30px var(--neo-shadow-light);
+    transform: translateY(-4px);
+}
+
+/* ============ Glassmorphism Effects ============ */
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass-dark {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 28px;
+    padding: 32px;
+    margin: 16px 0;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.35);
+    transform: translateY(-3px);
+}
+
+.glass-button {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    padding: 12px 32px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(31, 38, 135, 0.2);
+}
+
+.glass-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 24px rgba(31, 38, 135, 0.35);
+    transform: translateY(-2px);
+}
+
+.glass-hero {
+    background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                rgba(255, 255, 255, 0.05) 100%);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 36px;
+    padding: 60px 40px;
+    box-shadow: 0 12px 48px 0 rgba(31, 38, 135, 0.45),
+                inset 0 1px 2px 0 rgba(255, 255, 255, 0.4);
+}
+
+/* ============ Modern Card Designs ============ */
+.course-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-purple), var(--secondary-pink));
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.course-card:hover::before {
+    transform: scaleX(1);
+}
+
+.course-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+}
+
+.module-card {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.module-card:hover {
+    border-color: var(--primary-purple);
+    box-shadow: 0 15px 45px rgba(99, 102, 241, 0.2);
+    transform: translateY(-5px);
+}
+
+/* ============ Gradient Backgrounds ============ */
+.gradient-bg-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #d946ef 100%);
+}
+
+.gradient-bg-secondary {
+    background: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
+}
+
+.gradient-bg-success {
+    background: linear-gradient(135deg, #10b981 0%, #14b8a6 100%);
+}
+
+.gradient-bg-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 75%, #f5576c 100%);
+}
+
+.gradient-bg-ocean {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.gradient-bg-sunset {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.gradient-bg-forest {
+    background: linear-gradient(135deg, #0ba360 0%, #3cba92 100%);
+}
+
+/* Gradient Overlays */
+.gradient-overlay {
+    position: relative;
+}
+
+.gradient-overlay::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(236, 72, 153, 0.9));
+    z-index: 1;
+}
+
+.gradient-overlay > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* ============ Animated Elements ============ */
+.hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(99, 102, 241, 0.5),
+                0 0 60px rgba(236, 72, 153, 0.3);
+}
+
+.pulse-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .7;
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ============ Background Patterns ============ */
+.bg-pattern-dots {
+    background-image: radial-gradient(circle, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+.bg-pattern-grid {
+    background-image: linear-gradient(rgba(99, 102, 241, 0.1) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(99, 102, 241, 0.1) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+/* ============ Modern Buttons ============ */
+.btn-modern {
+    position: relative;
+    padding: 14px 36px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-modern::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn-modern:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn-modern:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-gradient {
+    background: linear-gradient(135deg, var(--primary-purple), var(--secondary-pink));
+    color: white;
+}
+
+.btn-gradient-hover:hover {
+    background: linear-gradient(135deg, var(--primary-purple-dark), var(--secondary-pink));
+}
+
+/* ============ Badge Styles ============ */
+.badge-modern {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.badge-success {
+    background: linear-gradient(135deg, #10b981, #14b8a6);
+    color: white;
+}
+
+.badge-warning {
+    background: linear-gradient(135deg, #f59e0b, #fbbf24);
+    color: white;
+}
+
+.badge-error {
+    background: linear-gradient(135deg, #ef4444, #f87171);
+    color: white;
+}
+
+/* ============ Form Elements ============ */
+.input-modern {
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-radius: 16px;
+    padding: 14px 20px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.input-modern:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 4px 16px rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ============ Utility Classes ============ */
+.transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-fast {
+    transition: all 0.15s ease;
+}
+
+.transition-slow {
+    transition: all 0.5s ease;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-purple), var(--secondary-pink));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-soft {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-medium {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-strong {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* ============ Responsive Design ============ */
+@media (max-width: 1024px) {
+    .neo-card, .glass-card, .module-card {
+        padding: 24px;
+    }
+    
+    .glass-hero {
+        padding: 40px 30px;
+        border-radius: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .neo, .glass, .neo-card, .glass-card, .course-card, .module-card {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .glass-hero {
+        padding: 30px 20px;
+        border-radius: 24px;
+    }
+    
+    .btn-modern {
+        padding: 12px 28px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 640px) {
+    .neo-card, .glass-card {
+        margin: 12px 0;
+    }
+    
+    .course-card:hover,
+    .module-card:hover {
+        transform: translateY(-4px);
+    }
+}
+
+/* ============ Dark Mode Support ============ */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --neo-bg: #2d3748;
+        --neo-shadow-dark: #1a202c;
+        --neo-shadow-light: #3d4a5c;
+    }
+}
