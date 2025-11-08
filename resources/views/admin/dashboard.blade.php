@@ -155,13 +155,15 @@
             <i class="fas fa-list text-3xl text-blue-600 mb-2 block"></i>
             <span class="font-semibold text-gray-800">Voir Modules</span>
         </a>
-        <a href="#" class="neo-button text-center p-6 hover-lift transition-smooth">
-            <i class="fas fa-users text-3xl text-green-600 mb-2 block"></i>
-            <span class="font-semibold text-gray-800">Gérer Utilisateurs</span>
-        </a>
-        <a href="#" class="neo-button text-center p-6 hover-lift transition-smooth">
-            <i class="fas fa-chart-bar text-3xl text-red-600 mb-2 block"></i>
-            <span class="font-semibold text-gray-800">Statistiques</span>
+        @if(Auth::user()->role === 'admin')
+            <a href="{{ route('admin.users.index') }}" class="neo-button text-center p-6 hover-lift transition-smooth">
+                <i class="fas fa-users text-3xl text-green-600 mb-2 block"></i>
+                <span class="font-semibold text-gray-800">Gérer Utilisateurs</span>
+            </a>
+        @endif
+        <a href="{{ route('admin.tickets.index') }}" class="neo-button text-center p-6 hover-lift transition-smooth">
+            <i class="fas fa-ticket-alt text-3xl text-red-600 mb-2 block"></i>
+            <span class="font-semibold text-gray-800">Voir Tickets</span>
         </a>
     </div>
 </div>
