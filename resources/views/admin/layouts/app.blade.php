@@ -58,6 +58,21 @@
                     Quiz
                 </a>
                 <div class="border-t border-gray-700 my-4"></div>
+                @if(Auth::user()->role === 'admin')
+                    <a href="{{ route('admin.users.index') }}" class="flex items-center px-6 py-3 hover:bg-gray-800 {{ request()->routeIs('admin.users.*') ? 'bg-gray-800 border-l-4 border-purple-500' : '' }}">
+                        <i class="fas fa-users mr-3"></i>
+                        Utilisateurs
+                    </a>
+                @endif
+                <a href="{{ route('admin.tickets.index') }}" class="flex items-center px-6 py-3 hover:bg-gray-800 {{ request()->routeIs('admin.tickets.*') ? 'bg-gray-800 border-l-4 border-purple-500' : '' }}">
+                    <i class="fas fa-ticket-alt mr-3"></i>
+                    Tickets
+                </a>
+                <a href="{{ route('admin.purchases.index') }}" class="flex items-center px-6 py-3 hover:bg-gray-800 {{ request()->routeIs('admin.purchases.*') ? 'bg-gray-800 border-l-4 border-purple-500' : '' }}">
+                    <i class="fas fa-shopping-cart mr-3"></i>
+                    Achats
+                </a>
+                <div class="border-t border-gray-700 my-4"></div>
                 <a href="{{ route('dashboard') }}" class="flex items-center px-6 py-3 hover:bg-gray-800">
                     <i class="fas fa-home mr-3"></i>
                     Retour au site
